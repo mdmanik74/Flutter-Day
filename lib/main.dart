@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_daily/screen/ob_bording.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -14,10 +13,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: "The Flutter Way",
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: OnBoard(),
+          scaffoldBackgroundColor: Colors.white,
+          primarySwatch: Colors.blue,
+          fontFamily: 'Inter',
+          inputDecorationTheme: const InputDecorationTheme(
+            filled: true,
+            fillColor: Colors.white,
+            errorStyle: TextStyle(height: 0),
+          )),
+      home: const OnBoard(),
     );
   }
 }
