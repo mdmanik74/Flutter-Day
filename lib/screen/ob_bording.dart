@@ -31,6 +31,24 @@ class _OnBoardState extends State<OnBoard> {
           filter: ImageFilter.blur(sigmaX: 20, sigmaY: 10),
           child: const SizedBox(),
         )),
+        SafeArea(
+            child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 32),
+          child: Column(
+            children: const [
+              Text(
+                "Learn desgin & code",
+                style:
+                    TextStyle(fontSize: 60, fontFamily: "Poppins", height: 1.2),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              Text(
+                  "Donot skib desgin. Learn desgin and code, by building real apps with Flutter and Swift. Complete courses about the best tools")
+            ],
+          ),
+        )),
       ]),
     );
   }
