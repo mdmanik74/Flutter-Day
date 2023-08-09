@@ -33,17 +33,17 @@ class _OnBoardState extends State<OnBoard> {
         ),
         Positioned.fill(
             child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 20, sigmaY: 10),
-        )),
+              filter: ImageFilter.blur(sigmaX: 20, sigmaY: 10),
+            )),
         RiveAnimation.asset(
           "assets/images/shapes.riv",
           controllers: [_btnAnimationController],
         ),
         Positioned.fill(
             child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 20, sigmaY: 10),
-          child: const SizedBox(),
-        )),
+              filter: ImageFilter.blur(sigmaX: 20, sigmaY: 10),
+              child: const SizedBox(),
+            )),
         SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32),
@@ -73,21 +73,21 @@ class _OnBoardState extends State<OnBoard> {
                     ),
                     Positioned.fill(
                         child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Icon(
-                          Icons.arrow_right_outlined,
-                          size: 70,
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        Text(
-                          'Start The Course',
-                          style: TextStyle(fontWeight: FontWeight.w600),
-                        )
-                      ],
-                    ))
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(
+                              Icons.arrow_right_outlined,
+                              size: 70,
+                            ),
+                            SizedBox(
+                              width: 8,
+                            ),
+                            Text(
+                              'Start The Course',
+                              style: TextStyle(fontWeight: FontWeight.w600),
+                            )
+                          ],
+                        ))
                   ]),
                 )
               ],
