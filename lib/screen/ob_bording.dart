@@ -16,6 +16,7 @@ class _OnBoardState extends State<OnBoard> {
   void initState() {
     _btnAnimationController = OneShotAnimation(
       "active",
+      autoplay: false,
     );
 
     super.initState();
