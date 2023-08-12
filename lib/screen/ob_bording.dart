@@ -64,6 +64,14 @@ class _OnBoardState extends State<OnBoard> {
                         "Donot skib desgin. Learn desgin and code, by building real apps with Flutter and Swift. Complete courses about the best tools"),
                   ]),
                 ),
+             SizedBox(
+               height: 64,
+               width: 260,
+               child:    GestureDetector(onTap: (){
+
+                 _btnAnimationController.isActive=true;
+               },),
+             ),
                 SizedBox(
                   height: 64,
                   width: 260,
@@ -87,7 +95,7 @@ class _OnBoardState extends State<OnBoard> {
                               style: TextStyle(fontWeight: FontWeight.w600),
                             )
                           ],
-                        ))
+                        )),
                   ]),
                 )
               ],
