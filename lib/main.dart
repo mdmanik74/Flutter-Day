@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_daily/screen/ob_bording.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             errorStyle: TextStyle(height: 0),
           )),
 
-      home: const OnBoard(),
+      home: const HomePage(),
     );
   }
 }
