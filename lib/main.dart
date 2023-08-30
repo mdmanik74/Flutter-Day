@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,20 +11,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
-      debugShowCheckedModeBanner: false,
-      title: "The Flutter Way",
+      title: 'Flutter Demo',
       theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
-          primarySwatch: Colors.blue,
-          fontFamily: 'Inter',
-          inputDecorationTheme: const InputDecorationTheme(
-            filled: true,
-            fillColor: Colors.white,
-            errorStyle: TextStyle(height: 0),
-          )),
+       
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home:  const MyHomePage(),
+    );
+  }
+}
 
-      home: const HomePage(),
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text('HI'),
     );
   }
 }
