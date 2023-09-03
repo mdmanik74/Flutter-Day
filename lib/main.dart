@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:source_code/source/stateless_widget.dart';
+import 'package:source_code/source/statefull_widget.dart';
+//import 'package:source_code/source/stateless_widget.dart';
 //import 'package:source_code/source/first_app.dart';
 //import 'package:source_code/source/stateless_widget.dart';
 
@@ -17,11 +18,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Stateless Widget'),
+          title: const Text('Flutter StatefulWidget'),
           backgroundColor: Colors.amberAccent,
           centerTitle: true,
         ),
-        body: const StateWidget(),
+        body: const StatefullWidget(),
         backgroundColor: Colors.greenAccent,
       ),
     );
