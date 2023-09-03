@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:source_code/source/first_app.dart';
+import 'package:source_code/source/stateless_widget.dart';
+//import 'package:source_code/source/first_app.dart';
+//import 'package:source_code/source/stateless_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +14,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // Material App
     return MaterialApp(
-      home: FirstApp(),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Stateless Widget'),
+          backgroundColor: Colors.amberAccent,
+          centerTitle: true,
+        ),
+        body: const StateWidget(),
+        backgroundColor: Colors.greenAccent,
+      ),
     );
   }
 }
