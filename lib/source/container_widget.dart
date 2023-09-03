@@ -21,8 +21,8 @@ class _ContainerWidgetState extends State<ContainerWidget> {
           color: Colors.red,
           shape: BoxShape.circle,
           border: Border.all(color: Colors.black, width: 10)),
-      child: const Text('Hello Container'),
       transform: Matrix4.rotationX(.5),
+      child: const Text('Hello Container'),
     );
   }
 }
