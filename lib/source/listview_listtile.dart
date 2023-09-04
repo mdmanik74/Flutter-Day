@@ -10,27 +10,27 @@ class ListviewList extends StatefulWidget {
 }
 
 class _ListviewListState extends State<ListviewList> {
+  final List toGen = List.generate(20, (index) {
+    return {
+      "id": index,
+      "title": " This is the title $index",
+      "subtitle": "This is the subtitle $index",
+    };
+  });
+
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: const [
-        ListTile(
-          title: Text('Item 01'),
-          trailing: Icon(Icons.arrow_back),
+    return ListView.builder(
+      itemCount: toGen.length,
+      itemBuilder: (BuildContext context, int index) => const Card(
+        elevation: 6,
+        margin: EdgeInsets.all(10),
+        child: ListTile(
+          leading: CircleAvatar(
+            backgroundColor: Colors.purple,
+          ),
         ),
-        ListTile(
-          title: Text('Item 02'),
-          trailing: Icon(Icons.arrow_back),
-        ),
-        ListTile(
-          title: Text('Item 03'),
-          trailing: Icon(Icons.arrow_back),
-        ),
-        ListTile(
-          title: Text('Item 04'),
-          trailing: Icon(Icons.arrow_back),
-        ),
-      ],
+      ),
     );
   }
 }
