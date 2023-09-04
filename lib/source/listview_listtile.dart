@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 
+
+/*
+
 class ListviewList extends StatefulWidget {
   const ListviewList({Key? key}) : super(key: key);
 
@@ -10,7 +13,7 @@ class ListviewList extends StatefulWidget {
 }
 
 class _ListviewListState extends State<ListviewList> {
-  final List list = List();
+
   @override
   void initState() {
     for (int i = 0; i <= 20; i++) {}
@@ -20,7 +23,7 @@ class _ListviewListState extends State<ListviewList> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: list.length,
+      //itemCount: list.length,
       itemBuilder: (context, index) {
         return ListTile(
           title: Text('Hello List ${list[index]}'),
@@ -30,7 +33,7 @@ class _ListviewListState extends State<ListviewList> {
     );
   }
 }
-
+*/
 
 /*
 
