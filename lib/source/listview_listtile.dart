@@ -10,27 +10,43 @@ class ListviewList extends StatefulWidget {
 }
 
 class _ListviewListState extends State<ListviewList> {
-  final List toGen = List.generate(20, (index) {
-    return {
-      "id": index,
-      "title": " This is the title $index",
-      "subtitle": "This is the subtitle $index",
-    };
-  });
+  final List list = List();
+  @override
+  void initState() {
+    for (int i = 0; i <= 20; i++) {}
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: toGen.length,
+      itemCount: list.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text('Hello List ${list[index]}'),
+          trailing: Icon(Icons.arrow_back_ios_new),
+        );
+      },
+    );
+  }
+}
+
+
+/*
+
+itemCount: toGen.length,
       itemBuilder: (BuildContext context, int index) => const Card(
         elevation: 6,
         margin: EdgeInsets.all(10),
         child: ListTile(
           leading: CircleAvatar(
             backgroundColor: Colors.purple,
+            child: Text(toGen[index]["id"].toString()),
           ),
+          title: Text(toGen[index]["title"]),
+          subtitle: Text(toGen[index]["subtitle"]),
+          trailing: const Icon(Icons.add_a_photo),
         ),
       ),
-    );
-  }
-}
+
+      */
