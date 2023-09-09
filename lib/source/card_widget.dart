@@ -14,16 +14,63 @@ class _CardWidgetsState extends State<CardWidgets> {
   Widget build(BuildContext context) {
     return Center(
       child: Card(
-        color: Colors.amberAccent,
-        shadowColor: Colors.black87,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-          side: const BorderSide(color: Colors.red),
-        ),
-        child: Container(
-          height: 200,
-          width: 200,
-        ),
+        margin: const EdgeInsets.all(10),
+        color: Colors.green[100],
+        shadowColor: Colors.blueGrey,
+        elevation: 10,
+        child: const Column(mainAxisSize: MainAxisSize.min, children: [
+          ListTile(
+            leading: Icon(
+              Icons.album,
+              color: Colors.cyan,
+              size: 45,
+            ),
+            title: Text(
+              "Let's Talk About Love",
+              style: TextStyle(fontSize: 20),
+            ),
+            subtitle: Text('Modern Talking Album'),
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(
+              Icons.album,
+              color: Colors.cyan,
+              size: 45,
+            ),
+            title: Text(
+              "Let's Talk About Love",
+              style: TextStyle(fontSize: 20),
+            ),
+            subtitle: Text('Modern Talking Album'),
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(
+              Icons.album,
+              color: Colors.cyan,
+              size: 45,
+            ),
+            title: Text(
+              "Let's Talk About Love",
+              style: TextStyle(fontSize: 20),
+            ),
+            subtitle: Text('Modern Talking Album'),
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(
+              Icons.album,
+              color: Colors.cyan,
+              size: 45,
+            ),
+            title: Text(
+              "Let's Talk About Love",
+              style: TextStyle(fontSize: 20),
+            ),
+            subtitle: Text('Modern Talking Album'),
+          ),
+        ]),
       ),
     );
   }
