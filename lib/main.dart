@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:source_code/source/card_widget.dart';
+//import 'package:source_code/source/card_widget.dart';
+import 'package:source_code/source/user_profile.dart';
 //import 'package:source_code/source/grid_view_builder.dart';
 
 //import 'source/grid_view.dart';
@@ -19,11 +20,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter Card Widget'),
+          title: const Text('Flutter User Profile'),
           backgroundColor: Colors.amberAccent,
           centerTitle: true,
         ),
-        body: const CardWidgets(),
+        body: const UserProfiles(),
         backgroundColor: Colors.greenAccent,
       ),
     );
