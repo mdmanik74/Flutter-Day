@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 
 class TimPichkers extends StatefulWidget {
@@ -7,7 +8,7 @@ class TimPichkers extends StatefulWidget {
   State<TimPichkers> createState() => _TimPichkersState();
 }
 
-
+class _ScreenOneState extends State<ScreenOne> {
   final _dateC = TextEditingController();
   final _timeC = TextEditingController();
 
@@ -86,3 +87,6 @@ class _TimPichkersState extends State<TimPichkers> {
     );
   }
 }
+
+
+*/

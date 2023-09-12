@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:source_code/source/page_view.dart';
+//import 'package:source_code/source/range_slider.dart';
 //import 'package:source_code/source/expansiontile.dart';
-import 'package:source_code/source/time_picker.dart';
+//import 'package:source_code/source/time_picker.dart';
 //import 'package:source_code/source/sliverappbar.dart';
 
 //import 'package:source_code/source/card_widget.dart';
@@ -24,11 +26,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter ChoiceChip Widget'),
+          title: const Text('Flutter Page View Widget'),
           backgroundColor: Colors.amberAccent,
           centerTitle: true,
         ),
-        body: TimPichkers(),
+        body: PageViews(),
         backgroundColor: Colors.greenAccent,
       ),
     );
