@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 //import 'package:source_code/source/expanded_widget.dart';
 //import 'package:source_code/source/future_builder.dart';
 import 'package:source_code/source/stream_bulder.dart';
+import 'package:source_code/source/table_widget.dart';
 //import 'package:source_code/source/page_view.dart';
 //import 'package:source_code/source/range_slider.dart';
 //import 'package:source_code/source/stepper_widget.dart';
@@ -29,11 +30,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter StreamBuilder Widget'),
+          title: const Text('Flutter Table Widget'),
           backgroundColor: Colors.amberAccent,
           centerTitle: true,
         ),
-        body: StramBuilderWideget(),
+        body: TablesWidget(),
         backgroundColor: Colors.greenAccent,
       ),
     );
