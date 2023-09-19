@@ -1,52 +1,77 @@
 import 'package:flutter/material.dart';
-import 'package:source_code/login_page/login.dart';
-import 'package:source_code/login_page/register.dart';
-//import 'package:source_code/source/gridview.dart';
-//import 'package:source_code/source/animated_crossfade.dart';
-//import 'package:source_code/source/expanded_widget.dart';
-//import 'package:source_code/source/future_builder.dart';
-//import 'package:source_code/source/stream_bulder.dart';
-//import 'package:source_code/source/table_widget.dart';
-//import 'package:source_code/source/page_view.dart';
-//import 'package:source_code/source/range_slider.dart';
-//import 'package:source_code/source/stepper_widget.dart';
-//import 'package:source_code/source/expansiontile.dart';
-//import 'package:source_code/source/time_picker.dart';
-//import 'package:source_code/source/sliverappbar.dart';
-//import 'package:source_code/source/user_profile.dart';
-//import 'package:source_code/source/grid_view_builder.dart';
-
-//import 'source/grid_view.dart';
-//import 'source/stack_widget.dart';
+import 'package:source_code/ecommerce/home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyApp extends StatefulWidget {
+  MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int _selectedIndex = 0;
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text(
+      'Index 0: Home',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 1: Favorite',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 2: Profile',
+      style: optionStyle,
+    ),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     // Material App
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'login',
-      routes: {
-        'login': (context) => const LoginPage(),
-        'register': (context) => const RegisterPage(),
-      },
-      /*
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter Table Widget'),
-          backgroundColor: Colors.amberAccent,
+          title: const Text('E-Commerce Shop'),
+          backgroundColor: Colors.red,
           centerTitle: true,
         ),
-        body: GridViews(),
-        backgroundColor: Colors.greenAccent,
+        body: Center(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+            currentIndex: _selectedIndex,
+            selectedItemColor: Colors.red,
+            unselectedItemColor: Colors.grey,
+            onTap: _onItemTapped,
+            items: const [
+              BottomNavigationBarItem(
+                label: 'Home',
+                icon: Icon(Icons.home),
+              ),
+              BottomNavigationBarItem(
+                label: 'Favorite',
+                icon: Icon(Icons.favorite),
+              ),
+              BottomNavigationBarItem(
+                label: 'Profile',
+                icon: Icon(Icons.person),
+              ),
+            ]),
+        backgroundColor: Colors.white,
       ),
-      */
     );
   }
 }
