@@ -2,20 +2,20 @@
 
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/login.png'),
+          image: AssetImage('assets/images/register.png'),
           fit: BoxFit.cover,
         ),
       ),
@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
             padding: const EdgeInsets.only(left: 35, top: 140),
             child: Container(
               child: const Text(
-                'Welcome Back \n Login Page',
+                'Welcome To \n Create Page',
                 style: TextStyle(fontSize: 40, color: Colors.white),
               ),
             ),
@@ -37,6 +37,19 @@ class _LoginPageState extends State<LoginPage> {
                 right: 35,
                 left: 35),
             child: Column(children: [
+              TextField(
+                decoration: InputDecoration(
+                    prefixIcon: const Icon(Icons.person),
+                    filled: true,
+                    fillColor: Colors.grey.shade100,
+                    hintText: 'Name',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    )),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
               TextField(
                 decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.email),
@@ -73,7 +86,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: ElevatedButton(
                       onPressed: () {},
                       child: const Text(
-                        'Sign In',
+                        'Sign Up',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
@@ -102,17 +115,7 @@ class _LoginPageState extends State<LoginPage> {
                         Navigator.pushNamed(context, 'register');
                       },
                       child: const Text(
-                        'Sing Up',
-                        style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.blue,
-                            decoration: TextDecoration.underline),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: const Text(
-                        'Forget Password',
+                        'Sing In',
                         style: TextStyle(
                             fontSize: 20,
                             color: Colors.blue,

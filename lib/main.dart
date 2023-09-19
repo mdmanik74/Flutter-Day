@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:source_code/login_page/login.dart';
+import 'package:source_code/login_page/register.dart';
 //import 'package:source_code/source/gridview.dart';
 //import 'package:source_code/source/animated_crossfade.dart';
 //import 'package:source_code/source/expanded_widget.dart';
@@ -30,7 +31,11 @@ class MyApp extends StatelessWidget {
     // Material App
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      initialRoute: 'login',
+      routes: {
+        'login': (context) => const LoginPage(),
+        'register': (context) => const RegisterPage(),
+      },
       /*
       home: Scaffold(
         appBar: AppBar(
