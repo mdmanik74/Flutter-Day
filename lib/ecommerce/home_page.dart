@@ -13,15 +13,16 @@ class _MyEcommersHomePageState extends State<MyEcommersHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Dashboard"),
-        actions: const [],
-      ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: [],
+          child: const Column(
+            children: [
+              Text(
+                'Our Products',
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              )
+            ],
           ),
         ),
       ),
