@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:source_code/desgin/setting_screen.dart';
+import 'package:source_code/ecommerce/homepage.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +18,19 @@ class _MyAppState extends State<MyApp> {
     // Material App
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
+      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
+      routes: {
+        "/": (context) => HomePage(),
+      },
+    );
+  }
+}
+
+
+
+/*
+
+ home: Scaffold(
         appBar: AppBar(
           title: const Text('Settings Screen Ui Design '),
           backgroundColor: Colors.red,
@@ -27,6 +39,6 @@ class _MyAppState extends State<MyApp> {
         body: SettingScreen(),
         backgroundColor: Colors.white,
       ),
-    );
-  }
-}
+
+
+*/
