@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:source_code/ecommerce/appbar.dart';
+import 'package:source_code/ecommerce/category_widget.dart';
+import 'package:source_code/ecommerce/itemwidget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -17,7 +19,6 @@ class _HomePageState extends State<HomePage> {
       body: ListView(children: [
         const HomeAppBar(),
         Container(
-          height: 500,
           padding: const EdgeInsets.only(top: 15),
           decoration: const BoxDecoration(
             color: Color(0xFFEDECF2),
@@ -62,7 +63,20 @@ class _HomePageState extends State<HomePage> {
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF4C53A5)),
               ),
-            )
+            ),
+            CategoriesWidgets(),
+            Container(
+              alignment: Alignment.centerLeft,
+              margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+              child: const Text(
+                'Best Selling',
+                style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF4C53A5)),
+              ),
+            ),
+            ItemWidgets(),
           ]),
         ),
       ]),

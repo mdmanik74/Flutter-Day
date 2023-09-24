@@ -1,3 +1,4 @@
+import 'package:source_code/core.dart';
 import 'package:flutter/material.dart';
 import 'package:source_code/ecommerce/homepage.dart';
 
@@ -33,6 +34,7 @@ class _MyAppState extends State<MyApp> {
  home: Scaffold(
         appBar: AppBar(
           title: const Text('Settings Screen Ui Design '),
+navigatorKey: Get.navigatorKey,
           backgroundColor: Colors.red,
           centerTitle: true,
         ),
